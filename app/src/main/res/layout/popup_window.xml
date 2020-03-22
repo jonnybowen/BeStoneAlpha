@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#62def8">
+    android:background="#279C8F">
 
     <TextView
         android:layout_width="221dp"
@@ -16,6 +15,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
         android:text="This app is used for finding or creating a study group for your academic needs! This app is free, but if you wish you can pay respected tutors for paid study sessions. To get started, search for a group or login."
+        android:textColor="@color/colorBackground"
         android:textSize="22sp" />
 
 </RelativeLayout>

@@ -7,5 +7,17 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="AppLightTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="bgColor">@color/colorBackground</item>
+        <item name="metaTextColor">#000000</item>
+        <item name="textColor">#279C8F</item>
+    </style>
+    <style name="AppDarkTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="bgColor">#3E3E3E</item>
+        <item name="metaTextColor">#FFFFFF</item>
+        <item name="textColor">#279C8F</item>
+    </style>
 
 </resources>

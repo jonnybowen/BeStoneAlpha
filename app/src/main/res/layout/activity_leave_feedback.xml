@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/bgColor"
     tools:context=".leaveFeedback">
 
     <TextView
@@ -11,14 +12,15 @@
         android:layout_width="290dp"
         android:layout_height="38dp"
         android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
         android:text="Leave Your Feedback"
         android:textAlignment="center"
+        android:textColor="?attr/textColor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText"
@@ -40,6 +42,7 @@
         android:layout_width="298dp"
         android:layout_height="60dp"
         android:layout_marginBottom="36dp"
+        android:background="?attr/bgColor"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -50,7 +53,9 @@
         android:layout_width="299dp"
         android:layout_height="55dp"
         android:layout_marginBottom="76dp"
+        android:background="?attr/bgColor"
         android:text="Submit Feedback"
+        android:textColor="?attr/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
