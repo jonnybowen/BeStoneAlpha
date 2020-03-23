@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/nameStudyGroupDetails"
         android:layout_width="364dp"
         android:layout_height="46dp"
         android:layout_marginStart="32dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/hostProfilePicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="250dp"
@@ -33,11 +33,11 @@
         android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/nameStudyGroupDetails"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/groupLeaderUsername"
         android:layout_width="187dp"
         android:layout_height="47dp"
         android:layout_marginTop="10dp"
@@ -46,25 +46,25 @@
         android:text="USERNAME"
         android:textColor="?attr/textColor"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintEnd_toStartOf="@+id/hostProfilePicture"
+        app:layout_constraintStart_toStartOf="@+id/nameStudyGroupDetails"
+        app:layout_constraintTop_toBottomOf="@+id/nameStudyGroupDetails" />
 
     <RatingBar
-        android:id="@+id/ratingBar2"
+        android:id="@+id/hostRating"
         android:layout_width="243dp"
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintBottom_toTopOf="@+id/subjectBar"
+        app:layout_constraintEnd_toStartOf="@+id/hostProfilePicture"
+        app:layout_constraintStart_toStartOf="@+id/groupLeaderUsername"
+        app:layout_constraintTop_toBottomOf="@+id/groupLeaderUsername" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/subjectBar"
         android:layout_width="358dp"
         android:layout_height="28dp"
         android:layout_marginStart="10dp"
@@ -76,10 +76,10 @@
         android:textColor="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintTop_toBottomOf="@+id/hostProfilePicture" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/dateTime"
         android:layout_width="219dp"
         android:layout_height="31dp"
         android:layout_marginStart="10dp"
@@ -91,10 +91,10 @@
         android:textColor="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/subjectBar" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/summaryOfStudy"
         android:layout_width="353dp"
         android:layout_height="210dp"
         android:layout_marginStart="10dp"
@@ -107,10 +107,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/dateTime" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/attendees"
         android:layout_width="273dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -119,10 +119,10 @@
         android:text="ATTENDEES"
         android:textColor="?attr/metaTextColor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/summaryOfStudy" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/attendButton"
         android:layout_width="84dp"
         android:layout_height="47dp"
         android:layout_marginStart="15dp"
@@ -131,6 +131,6 @@
         android:background="?attr/bgColor"
         android:text="ATTEND"
         android:textColor="?attr/textColor"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toEndOf="@+id/attendees"
+        app:layout_constraintTop_toBottomOf="@+id/summaryOfStudy" />
 </androidx.constraintlayout.widget.ConstraintLayout>
