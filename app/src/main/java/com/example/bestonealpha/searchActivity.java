@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.TextView;
 
@@ -47,5 +50,14 @@ public class searchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_search);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageButton profileImageButton = findViewById(R.id.imageButton);
+        profileImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profileImageButton = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(profileImageButton);
+            }
+        });
     }
 }

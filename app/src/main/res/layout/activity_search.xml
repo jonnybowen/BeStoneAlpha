@@ -39,6 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton" />
 
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="45dp"
@@ -47,6 +48,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
@@ -63,11 +65,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search for a group with the search bar below"
+        android:textColor="?attr/metaTextColor"
+        android:textColorHint="?attr/metaTextColor"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="48dp" />
 
