@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,10 +31,10 @@ public class registerActivity extends AppCompatActivity {
             setTheme(R.style.AppLightTheme);
         }
 
-        email = findViewById(R.id.emailEdit);
-        userName = findViewById(R.id.userNameEdit);
-        password = findViewById(R.id.passwordEdit);
-        confirmPassword = findViewById(R.id.confirmPasswordButton);
+        email = findViewById(R.id.EmailEditReg);
+        userName = findViewById(R.id.userNameEditReg);
+        password = findViewById(R.id.passwordEditReg);
+        confirmPassword = findViewById(R.id.confirmpassEditReg);
         registerBtn = findViewById(R.id.completeRegisterButton);
 
 
