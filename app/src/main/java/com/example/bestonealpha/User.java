@@ -3,9 +3,10 @@ package com.example.bestonealpha;
 import com.example.bestonealpha.Feedback;
 import com.example.bestonealpha.StudyGroup;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class User {
+public class User implements Serializable {
 	//declare variables
 	private String email;
 	private String password;
@@ -18,13 +19,14 @@ public class User {
 	// no argument constructor
 	public User() {
 		setEmail("no email set");
-		setPassword("nopassword");
-		setDisplayName("displayname not set");
+		setPassword("no password");
+		setDisplayName("display name not set");
 		setUserScore(0);
 		setFeedbackCount(getFeedbackList().size());
 		
 	}
-	
+
+	//Register Constructor (takes display name)
 	public User(String emailIn, String passwordIn, String displayNameIn) {
 		this.setEmail(emailIn);
 		this.setPassword(passwordIn);
@@ -34,6 +36,19 @@ public class User {
 		feedbackList = new ArrayList<Feedback>();
 		studyGroupList = new ArrayList<StudyGroup>();
 	}
+
+	//Login Constructor (doesn't take display name)
+	public User(String emailIn, String passwordIn) {
+		this.setEmail(emailIn);
+		this.setPassword(passwordIn);
+		this.setDisplayName(emailIn);
+		setUserScore(0);
+		setFeedbackCount(0);
+		feedbackList = new ArrayList<Feedback>();
+		studyGroupList = new ArrayList<StudyGroup>();
+	}
+
+
 	
 	/**
 	 * A method to create a study group.

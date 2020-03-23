@@ -8,20 +8,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class loginActivity extends AppCompatActivity {
 
+
+
+    // Declare views/editTexts/Buttons
+    EditText email;
+    EditText password;
+    Button register;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+        // Dark Mode Code
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             setTheme(R.style.AppDarkTheme);
         } else {
             setTheme(R.style.AppLightTheme);
         }
+
+        //Initialise buttons/views
+        email = findViewById(R.id.emailEdit);
+        password = findViewById(R.id.passwordEdit);
+        register = findViewById(R.id.loginRegisterButton);
 
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_login);
@@ -31,13 +49,17 @@ public class loginActivity extends AppCompatActivity {
         submitLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Create User
+                User currentUser = new User(email.toString(), password.toString());
+
                 Intent searchScreen = new Intent(getApplicationContext(), searchActivity.class);
+                searchScreen.putExtra("user", currentUser);
                 startActivity(searchScreen);
             }
         });
 
-        Button loginRegisterButton = findViewById(R.id.loginRegisterButton);
-        loginRegisterButton.setOnClickListener(new View.OnClickListener() {
+       // Register Button
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent registerScreen = new Intent(getApplicationContext(), registerActivity.class);

@@ -3,11 +3,26 @@ package com.example.bestonealpha;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class registerActivity extends AppCompatActivity {
+
+    // Declare views and edittexts
+    EditText email;
+    EditText userName;
+    EditText password;
+    EditText confirmPassword;
+    Button registerBtn;
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,8 +33,24 @@ public class registerActivity extends AppCompatActivity {
             setTheme(R.style.AppLightTheme);
         }
 
+        email = findViewById(R.id.emailEdit);
+        userName = findViewById(R.id.userNameEdit);
+        password = findViewById(R.id.passwordEdit);
+        confirmPassword = findViewById(R.id.confirmPasswordButton);
+        registerBtn = findViewById(R.id.completeRegisterButton);
+
+
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_register);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User registerUser = new User(email.getText().toString(), password.getText().toString(), userName.getText().toString());
+                Intent searchScreen = new Intent(getApplicationContext(), searchActivity.class);
+                startActivity(searchScreen);
+            }
+        });
     }
 }
