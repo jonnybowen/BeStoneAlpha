@@ -13,14 +13,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="Enter your e-mail address"
         android:inputType="textPersonName"
+        android:textColorHint="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="125dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/submitLoginButton"
@@ -45,6 +47,7 @@
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPersonName"
+        android:textColorHint="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="@+id/emailEdit"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/emailEdit"
@@ -85,16 +88,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="Not got an account? Register below :) "
+        android:textColor="?attr/metaTextColor"
+        android:textColorHint="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submitLoginButton" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="202dp"
+        android:layout_height="39dp"
         android:text="Username is not a valid login"
-        android:textSize="8sp"
+        android:textColor="?attr/metaTextColor"
+        android:textColorHint="?attr/metaTextColor"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toStartOf="parent"

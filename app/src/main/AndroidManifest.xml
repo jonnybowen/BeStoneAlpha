@@ -12,7 +12,8 @@
         <activity android:name=".createStudyRequest"></activity>
         <activity android:name=".leaveFeedback" />
         <activity android:name=".createStudyOpp" />
-        <activity android:name=".profileActivity" />
+        <activity android:name=".profileActivity"
+            android:parentActivityName=".searchActivity"/>
         <activity
             android:name=".registerActivity"
             android:parentActivityName=".loginActivity" />
