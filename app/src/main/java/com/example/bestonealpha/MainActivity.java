@@ -17,6 +17,18 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Declare variables
+    User currentUser;
+
+    public User getUser() {
+        return currentUser;
+    }
+
+    public void setUser(User userIn) {
+        currentUser = userIn;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
