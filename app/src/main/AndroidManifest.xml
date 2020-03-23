@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".createStudyRequest"></activity>
+        <activity android:name=".TutorActivity"
+            android:parentActivityName=".profileActivity"/>
+        <activity android:name=".createStudyRequest" />
         <activity android:name=".leaveFeedback" />
         <activity android:name=".createStudyOpp" />
-        <activity android:name=".profileActivity"
-            android:parentActivityName=".searchActivity"/>
+        <activity
+            android:name=".profileActivity"
+            android:parentActivityName=".searchActivity" />
         <activity
             android:name=".registerActivity"
             android:parentActivityName=".loginActivity" />

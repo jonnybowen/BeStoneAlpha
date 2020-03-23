@@ -3,9 +3,12 @@ package com.example.bestonealpha;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class profileActivity extends AppCompatActivity {
 
@@ -21,6 +24,15 @@ public class profileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button applyTutor = findViewById(R.id.applyTutor);
+        applyTutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tutor = new Intent(getApplicationContext(), TutorActivity.class);
+                startActivity(tutor);
+            }
+        });
 
 
     }

@@ -8,7 +8,7 @@
     tools:context=".profileActivity">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/searchProfilePicture"
         android:layout_width="113dp"
         android:layout_height="106dp"
         android:layout_marginTop="25dp"
@@ -29,13 +29,14 @@
         android:layout_marginRight="30dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:text="Username"
         android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/subjectsOfInterest"
         android:layout_width="174dp"
         android:layout_height="42dp"
         android:layout_marginStart="15dp"
@@ -45,14 +46,14 @@
         android:layout_marginRight="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Subjects"
         android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameEdit" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editPassword"
         android:layout_width="172dp"
         android:layout_height="45dp"
         android:layout_marginStart="15dp"
@@ -62,14 +63,14 @@
         android:layout_marginRight="30dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Password"
         android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/subjectsOfInterest" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/confirmPassword"
         android:layout_width="175dp"
         android:layout_height="44dp"
         android:layout_marginStart="15dp"
@@ -81,12 +82,12 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/confirmChangesButton"
         android:layout_width="125dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
@@ -94,9 +95,27 @@
         android:layout_marginTop="450dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="100dp"
         android:background="?attr/bgColor"
         android:text="Confirm Changes"
+        android:textColor="?attr/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/applyTutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/bgColor"
+        android:text="Apply to be a tutor"
         android:textColor="?attr/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
