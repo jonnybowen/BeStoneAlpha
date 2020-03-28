@@ -16,16 +16,13 @@
         android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="#00FFFFFF"
         android:textColor="?attr/textColor"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
         tools:visibility="visible" />
 
     <TextView
@@ -38,11 +35,8 @@
         android:clickable="true"
         android:textColor="?attr/metaTextColor"
         android:textColorHint="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
-        app:layout_constraintTop_toTopOf="parent" />
-        android:text="Username goes here"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton" />
+        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture" />
 
     <ImageButton
         android:id="@+id/searchProfilePicture"
@@ -74,11 +68,14 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:text="Search for a group with the search bar below"
         android:textColor="?attr/metaTextColor"
         android:textColorHint="?attr/metaTextColor"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="48dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/group1"
