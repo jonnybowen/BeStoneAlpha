@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".searchActivity"></activity>
+        <activity android:name=".hostProfileActivity"></activity>
+        <activity android:name=".searchActivity" />
         <activity
             android:name=".TutorActivity"
             android:parentActivityName=".profileActivity" />
@@ -21,9 +22,6 @@
         <activity
             android:name=".profileActivity"
             android:parentActivityName=".searchActivity" />
-        <activity
-            android:name=".registerActivity"
-            android:parentActivityName=".loginActivity" />
         <activity
             android:name=".loginActivity"
             android:parentActivityName=".MainActivity" />

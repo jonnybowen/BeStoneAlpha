@@ -19,7 +19,7 @@
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <EditText
-        android:id="@+id/usernameEdit"
+        android:id="@+id/feedbackText"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
@@ -50,7 +50,7 @@
         android:textColor="?attr/metaTextColor"
         app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/feedbackText" />
 
     <EditText
         android:id="@+id/editPassword"

@@ -1,7 +1,11 @@
 package com.example.bestonealpha;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.bestonealpha.data.GroupListAdapter;
@@ -16,6 +20,7 @@ public class searchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchListView);
+        Button searchProfileButton = (Button) findViewById(R.id.searchProfileButton);
 
         // Declare and initialise variables
         ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
@@ -36,6 +41,14 @@ public class searchActivity extends AppCompatActivity {
 
         GroupListAdapter adapter = new GroupListAdapter(this, R.layout.group_adapter_view, masterGroupList);
         list.setAdapter(adapter);
+
+        searchProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToProfile = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(goToProfile);
+            }
+        });
 
 
     }
