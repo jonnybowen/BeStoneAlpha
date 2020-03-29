@@ -90,8 +90,8 @@
         android:id="@+id/confirmChangesButton"
         android:layout_width="125dp"
         android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="450dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
@@ -101,15 +101,37 @@
         android:textColor="?attr/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/StudyOppButton"
+        android:layout_width="131dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="?attr/bgColor"
+        android:text="Create Study Opportunity"
+        android:textColor="?attr/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/confirmChangesButton"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/applyTutor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginLeft="75dp"
+        android:layout_width="217dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="500dp"
         android:layout_marginEnd="300dp"
         android:layout_marginRight="300dp"
@@ -119,6 +141,8 @@
         android:textColor="?attr/textColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
 </androidx.constraintlayout.widget.ConstraintLayout>
