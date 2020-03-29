@@ -90,13 +90,14 @@ public class loginActivity extends AppCompatActivity {
         });
 
        // Register Button
-   //     register.setOnClickListener(new View.OnClickListener() {
-   //         @Override
-   //         public void onClick(View v) {
-  //              Intent registerScreen = new Intent(getApplicationContext(), registerActivity.class);
-  //              startActivity(registerScreen);
-   //         }
-  //      });
+        register = findViewById(R.id.loginRegisterButton);
+        register.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+              Intent registerScreen = new Intent(getApplicationContext(), registerActivity.class);
+              startActivity(registerScreen);
+          }
+        });
 
     }
 }
