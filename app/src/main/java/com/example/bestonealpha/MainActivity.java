@@ -18,9 +18,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     //Declare variables
-    User currentUser;
+    static User currentUser;
 
-    public User getUser() {
+    public static User getUser() {
         return currentUser;
     }
 

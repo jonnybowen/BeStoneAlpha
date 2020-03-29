@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class StudyGroup {
 	//initialise variables
-	private String groupName;
-	private String moduleCode;
-	private String details;
-	private String nextSession;
-	private User leader;
-	private String leaderName;
-	private ArrayList<User> memberList = new ArrayList<>();
+	private static String groupName;
+	private static String moduleCode;
+	private static String details;
+	private static String nextSession;
+	private static User leader;
+	private static String leaderName;
+	private static ArrayList<User> memberList = new ArrayList<>();
 	private boolean groupOpen;
 
 	// no argument constructor 
@@ -68,7 +68,7 @@ public class StudyGroup {
 	/**
 	 * @return the groupName
 	 */
-	public String getGroupName() {
+	public static String getGroupName() {
 		return groupName;
 	}
 	/**
@@ -80,7 +80,7 @@ public class StudyGroup {
 	/**
 	 * @return the moduleCode
 	 */
-	public String getModuleCode() {
+	public static String getModuleCode() {
 		return moduleCode;
 	}
 	/**
@@ -92,7 +92,7 @@ public class StudyGroup {
 	/**
 	 * @return the details
 	 */
-	public String getDetails() {
+	public static String getDetails() {
 		return details;
 	}
 	/**
@@ -104,7 +104,7 @@ public class StudyGroup {
 	/**
 	 * @return the dateTime
 	 */
-	public String getNextSession() {
+	public static String getNextSession() {
 		return nextSession;
 	}
 	/**
@@ -117,7 +117,7 @@ public class StudyGroup {
 	/**
 	 * @return the leader
 	 */
-	public User getLeader() {
+	public static User getLeader() {
 		return leader;
 	}
 
@@ -131,7 +131,7 @@ public class StudyGroup {
 	/**
 	 * @return the leaderName
 	 */
-	public String getLeaderName() {
+	public static String getLeaderName() {
 		return leaderName;
 	}
 
@@ -145,7 +145,7 @@ public class StudyGroup {
 	/**
 	 * @return the memberList
 	 */
-	public ArrayList<User> getMemberList() {
+	public static ArrayList<User> getMemberList() {
 		return memberList;
 	}
 
