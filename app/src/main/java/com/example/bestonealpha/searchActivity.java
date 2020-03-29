@@ -32,6 +32,7 @@ public class searchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchListView);
+        Button searchProfileButton = (Button) findViewById(R.id.searchProfileButton);
 
         // Initialise button
         createButton = findViewById(R.id.searchCreateGroupBtn);
@@ -52,6 +53,14 @@ public class searchActivity extends AppCompatActivity {
 
         GroupListAdapter adapter = new GroupListAdapter(this, R.layout.group_adapter_view, masterGroupList);
         list.setAdapter(adapter);
+
+        searchProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToProfile = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(goToProfile);
+            }
+        });
 
 
         //Create Group Button
