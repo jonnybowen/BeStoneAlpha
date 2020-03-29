@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class User implements Serializable {
 	//declare variables
-	private String email;
+	private static String email;
 	private String password;
-	private String displayName;
+	private  static String displayName;
 	private ArrayList<Feedback> feedbackList;
-	private int feedbackCount;
+	private static int feedbackCount;
 	private double userScore;
 	private ArrayList<StudyGroup> studyGroupList;
 
@@ -111,7 +111,7 @@ public class User implements Serializable {
 	/**
 	 * @return the email
 	 */
-	public String getEmail() {
+	public static String getEmail() {
 		return email;
 	}
 	/**
@@ -135,7 +135,7 @@ public class User implements Serializable {
 	/**
 	 * @return the displayName
 	 */
-	public String getDisplayName() {
+	public static String getDisplayName() {
 		return displayName;
 	}
 	/**
@@ -148,7 +148,7 @@ public class User implements Serializable {
 	/**
 	 * @return the feedbackCount
 	 */
-	public int getFeedbackCount() {
+	public static int getFeedbackCount() {
 		return feedbackCount;
 	}
 

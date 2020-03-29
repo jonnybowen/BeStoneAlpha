@@ -31,7 +31,7 @@ public class registerActivity extends AppCompatActivity {
             setTheme(R.style.AppLightTheme);
         }
 
-        email = findViewById(R.id.EmailEditReg);
+        email = findViewById(R.id.EmailEditLogin);
         userName = findViewById(R.id.userNameEditReg);
         password = findViewById(R.id.passwordEditReg);
         confirmPassword = findViewById(R.id.confirmpassEditReg);
@@ -45,7 +45,7 @@ public class registerActivity extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User registerUser = new User(email.getText().toString(), password.getText().toString(), userName.getText().toString());
+               User registerUser = new User(email.getText().toString(), password.getText().toString(), userName.getText().toString());
                 Intent searchScreen = new Intent(getApplicationContext(), searchActivity.class);
                 startActivity(searchScreen);
             }
