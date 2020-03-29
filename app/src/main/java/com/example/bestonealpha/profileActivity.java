@@ -25,6 +25,15 @@ public class profileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Button createStudyOppButton = findViewById(R.id.StudyOppButton);
+        createStudyOppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createStudyOppScreen = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(createStudyOppScreen);
+            }
+        });
+
         Button applyTutor = findViewById(R.id.applyTutor);
         applyTutor.setOnClickListener(new View.OnClickListener() {
             @Override

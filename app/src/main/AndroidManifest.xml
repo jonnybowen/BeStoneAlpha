@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TutorActivity"
-            android:parentActivityName=".profileActivity"/>
+        <activity android:name=".searchActivity"></activity>
+        <activity
+            android:name=".TutorActivity"
+            android:parentActivityName=".profileActivity" />
         <activity android:name=".createStudyRequest" />
         <activity android:name=".leaveFeedback" />
-        <activity android:name=".createStudyOpp" />
+        <activity
+            android:name=".createStudyOpp"
+            android:parentActivityName=".profileActivity" />
         <activity
             android:name=".profileActivity"
             android:parentActivityName=".searchActivity" />
@@ -22,9 +26,6 @@
             android:parentActivityName=".loginActivity" />
         <activity
             android:name=".loginActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".searchActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ui.login.LoginActivity"

@@ -54,8 +54,7 @@ public class loginActivity extends AppCompatActivity {
         }
 
         //Initialise buttons/views
-        email = (EditText)findViewById(R.id.EmailEditLogin);
-        password = (EditText)findViewById(R.id.passwordEditLogin);
+
         register = (Button)findViewById(R.id.loginRegisterButton);
         login = (Button)findViewById(R.id.submitLoginButton)
 ;
@@ -65,6 +64,8 @@ public class loginActivity extends AppCompatActivity {
 
 
         //Submit Login Button
+        email = (EditText)findViewById(R.id.EmailEditLogin);
+        password = (EditText)findViewById(R.id.passwordEditLogin);
         login = findViewById(R.id.submitLoginButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +78,13 @@ public class loginActivity extends AppCompatActivity {
                 //Create User
                 User currentUser = new User(emailString, passwordString);
 
+                //Store user to pass to next activity
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("user", currentUser);
+
+                //Move to next activity.
                 Intent searchScreen = new Intent(getApplicationContext(), searchActivity.class);
-                searchScreen.putExtra("user", currentUser);
+                searchScreen.putExtras(bundle);
                 startActivity(searchScreen);
             }
         });
