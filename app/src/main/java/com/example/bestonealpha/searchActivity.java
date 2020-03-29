@@ -1,7 +1,11 @@
 package com.example.bestonealpha;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.bestonealpha.data.GroupListAdapter;
@@ -10,15 +14,27 @@ import java.util.ArrayList;
 
 public class searchActivity extends AppCompatActivity {
 
+    //Declare views
+    Button createButton;
 
+    // Declare and initialise variables
+    ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+
+    public ArrayList<StudyGroup> getMasterGroupList() {
+        return masterGroupList;
+    }
+
+    public void setMasterGroupList(ArrayList<StudyGroup> masterGroupList) {
+        this.masterGroupList = masterGroupList;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchListView);
 
-        // Declare and initialise variables
-        ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+        // Initialise button
+        createButton = findViewById(R.id.searchCreateGroupBtn);
 
         // Create Users and Study Groups to populate group list
         User a = new User("annie@amail.com", "somepassword2", "Annie K");
@@ -36,6 +52,16 @@ public class searchActivity extends AppCompatActivity {
 
         GroupListAdapter adapter = new GroupListAdapter(this, R.layout.group_adapter_view, masterGroupList);
         list.setAdapter(adapter);
+
+
+        //Create Group Button
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent groupCreated = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(groupCreated);
+            }
+        });
 
 
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".searchActivity"></activity>
+        <activity android:name=".groupCreatedActivity"></activity>
+        <activity android:name=".searchActivity" />
         <activity
             android:name=".TutorActivity"
             android:parentActivityName=".profileActivity" />

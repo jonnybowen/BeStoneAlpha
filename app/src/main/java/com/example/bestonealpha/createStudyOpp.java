@@ -3,6 +3,7 @@ package com.example.bestonealpha;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,12 +13,18 @@ import android.os.Bundle;
 
 public class createStudyOpp extends AppCompatActivity {
 
-    // initialise views/editTexts
+    // declare views/editTexts
     EditText groupName;
     EditText moduleCode;
     EditText details;
     EditText nextSession;
     Button SGsubmit;
+
+    //declare variables to pass
+    String passGroupName;
+    String passModuleCode;
+    String passDetails;
+    String passNextSession;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +35,13 @@ public class createStudyOpp extends AppCompatActivity {
             setTheme(R.style.AppLightTheme);
         }
 
+
+
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_create_study_opp);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // add back button
+
+
 
         // initialise views
         groupName = findViewById(R.id.oppType);
@@ -46,8 +57,18 @@ public class createStudyOpp extends AppCompatActivity {
         SGsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User u = new User(); // dummy user - until we integrate users this is the only way to make the group
-                StudyGroup sg = new StudyGroup(groupName.toString(), moduleCode.toString(), details.toString(), nextSession.toString(), u);
+                  passGroupName = groupName.getText().toString();
+                  passModuleCode = moduleCode.getText().toString();
+                  passDetails = details.getText().toString();
+                  passNextSession = nextSession.getText().toString();
+
+                Intent groupCreated = new Intent(getApplicationContext(), searchActivity.class);
+                groupCreated.putExtra("group_name", passGroupName);
+                groupCreated.putExtra("module_code", passModuleCode);
+                groupCreated.putExtra("details", passDetails);
+                groupCreated.putExtra("next_session", passNextSession);
+
+                startActivity(groupCreated);
             }
         });
 
