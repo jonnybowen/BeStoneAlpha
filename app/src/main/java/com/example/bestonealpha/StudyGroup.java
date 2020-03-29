@@ -24,6 +24,13 @@ public class StudyGroup {
 		addToMemberList(leader);
 	}
 
+	//ListView Constructor
+	public StudyGroup(String groupName, String leaderName, String nextSession) {
+		this.setGroupName(groupName);
+		this.setNextSession(nextSession);
+		this.setLeaderName(leaderName);
+	}
+
 	public StudyGroup(String groupName, String moduleCode, String details, String nextSession, User leader) {
 		this.setGroupName(groupName);
 		this.setModuleCode(moduleCode);
