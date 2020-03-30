@@ -23,9 +23,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/usernameEdit"
-        android:layout_width="298dp"
-        android:layout_height="343dp"
+        android:id="@+id/feedbackText"
+        android:layout_width="304dp"
+        android:layout_height="239dp"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="enter feedback here"
@@ -40,17 +40,19 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="298dp"
+        android:layout_width="240dp"
         android:layout_height="60dp"
         android:layout_marginBottom="36dp"
         android:background="?attr/bgColor"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:clickable="true"
+        android:stepSize=".5"
+        app:layout_constraintBottom_toTopOf="@+id/feedbackButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/feedbackButton"
         android:layout_width="299dp"
         android:layout_height="55dp"
         android:layout_marginBottom="76dp"
