@@ -44,6 +44,7 @@ public class profileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+<<<<<<< Updated upstream
         username = findViewById(R.id.profileUsername);
         email = findViewById(R.id.profileEmailAddress);
         rating = findViewById(R.id.profileRatingCount);
@@ -65,6 +66,17 @@ public class profileActivity extends AppCompatActivity {
               //  startActivity(createStudyOppScreen);
         //    }
       //  });
+=======
+        profileUsername = findViewById(R.id.profileUsername);
+        profileEmailAddress = findViewById(R.id.profileEmailAddress);
+        profileRatingCount = findViewById(R.id.profileRatingCount);
+
+        profileUsername.setText(profileEmail);
+        profileEmailAddress.setText(profileDisplayName);
+        profileRatingCount.setText(profileFeedbackCount);
+
+
+>>>>>>> Stashed changes
 
        Button appTut = findViewById(R.id.applyTutor);
        appTut.setOnClickListener(new View.OnClickListener() {

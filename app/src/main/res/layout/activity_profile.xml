@@ -11,6 +11,7 @@
         android:id="@+id/searchProfilePicture"
         android:layout_width="113dp"
         android:layout_height="106dp"
+<<<<<<< Updated upstream
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="50dp"
@@ -127,6 +128,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+=======
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+>>>>>>> Stashed changes
 
     <Button
         android:id="@+id/applyTutor"
@@ -195,6 +205,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+<<<<<<< Updated upstream
 
     <RatingBar
         android:id="@+id/ratingBar2"
@@ -211,3 +222,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+>>>>>>> Stashed changes
