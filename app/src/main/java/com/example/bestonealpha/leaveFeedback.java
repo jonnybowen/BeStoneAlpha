@@ -33,7 +33,7 @@ public class leaveFeedback extends AppCompatActivity {
         final EditText feedbackText = (EditText) findViewById(R.id.feedbackText);
         final RatingBar rating = (RatingBar) findViewById(R.id.ratingBar);
 
-
+       //button to confirm feedback and ensure feedback is saved
         feedbackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class leaveFeedback extends AppCompatActivity {
 
                 user.createFeedback(user, userRating, userFeedback);
 
-                Intent backToProfile = new Intent(getApplicationContext(), hostProfileActivity.class);
+                Intent backToProfile = new Intent(getApplicationContext(), searchActivity.class);
                 startActivity(backToProfile);
             }
         });

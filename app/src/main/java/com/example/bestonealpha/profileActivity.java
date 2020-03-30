@@ -24,7 +24,7 @@ public class profileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        //button to create a study session
         Button createStudyOppButton = findViewById(R.id.StudyOppButton);
         createStudyOppButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +33,7 @@ public class profileActivity extends AppCompatActivity {
                 startActivity(createStudyOppScreen);
             }
         });
-
+        //button to apply to become a tutor
         Button applyTutor = findViewById(R.id.applyTutor);
         applyTutor.setOnClickListener(new View.OnClickListener() {
             @Override

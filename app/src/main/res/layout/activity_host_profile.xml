@@ -6,67 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".hostProfileActivity">
 
-    <ImageView
-        android:id="@+id/userProfilePicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/usernameText"
         android:layout_width="67dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
-        android:text="Username"
-        app:layout_constraintStart_toEndOf="@+id/userProfilePicture"
+        android:text="Name"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
         android:id="@+id/userRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="76dp"
         android:clickable="false"
-        app:layout_constraintStart_toEndOf="@+id/userProfilePicture"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/giveFeedbackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="4dp"
         android:text="Give Feedback"
+        app:layout_constraintBottom_toTopOf="@+id/reviewsText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userProfilePicture" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.185" />
 
     <TextView
         android:id="@+id/reviewsText"
         android:layout_width="383dp"
         android:layout_height="169dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="204dp"
         android:text="Reviews"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
 
     <TextView
         android:id="@+id/tutoringHistoryText"
         android:layout_width="388dp"
         android:layout_height="136dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:text="Tutoring History"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reviewsText" />
 
@@ -74,10 +64,20 @@
         android:id="@+id/qualificationsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
         android:text="Qualifications"
-        app:layout_constraintStart_toEndOf="@+id/userProfilePicture"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/usernameText" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="122dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@mipmap/stone" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
