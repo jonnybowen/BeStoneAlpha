@@ -141,8 +141,6 @@ public class loginActivity extends AppCompatActivity {
         });
 
 
-            }
-        });
         register = (Button) findViewById(R.id.RegisterButton);
 
         register.setOnClickListener(new View.OnClickListener() {

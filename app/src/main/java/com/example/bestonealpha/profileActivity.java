@@ -66,13 +66,13 @@ public class profileActivity extends AppCompatActivity {
         //    }
       //  });
 
-        profileUsername = findViewById(R.id.profileUsername);
-        profileEmailAddress = findViewById(R.id.profileEmailAddress);
-        profileRatingCount = findViewById(R.id.profileRatingCount);
+       // profileUsername = findViewById(R.id.profileUsername);
+      //  profileEmailAddress = findViewById(R.id.profileEmailAddress);
+      //  profileRatingCount = findViewById(R.id.profileRatingCount);
 
-        profileUsername.setText(profileEmail);
-        profileEmailAddress.setText(profileDisplayName);
-        profileRatingCount.setText(profileFeedbackCount);
+      //  profileUsername.setText(profileEmail);
+      //  profileEmailAddress.setText(profileDisplayName);
+       // profileRatingCount.setText(profileFeedbackCount);
 
 
 
@@ -85,17 +85,17 @@ public class profileActivity extends AppCompatActivity {
            }
 
         //button to create a study session
-        Button createStudyOppButton = findViewById(R.id.StudyOppButton);
-        createStudyOppButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent createStudyOppScreen = new Intent(getApplicationContext(), createStudyOpp.class);
-                startActivity(createStudyOppScreen);
-            }
-        });
+        //Button createStudyOppButton = findViewById(R.id.StudyOppButton);
+        //createStudyOppButton.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View v) {
+              //  Intent createStudyOppScreen = new Intent(getApplicationContext(), createStudyOpp.class);
+                //startActivity(createStudyOppScreen);
+            });
+
         //button to apply to become a tutor
-        Button applyTutor = findViewById(R.id.applyTutor);
-        applyTutor.setOnClickListener(new View.OnClickListener() {
+        Button applTut = findViewById(R.id.applyTutor);
+        applTut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent tutor = new Intent(getApplicationContext(), TutorActivity.class);

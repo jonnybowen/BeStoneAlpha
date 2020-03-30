@@ -23,7 +23,7 @@
         android:id="@+id/passwordEditLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPersonName"
@@ -50,6 +50,8 @@
         android:id="@+id/RegisterButton"
         android:layout_width="184dp"
         android:layout_height="47dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
         android:background="?attr/bgColor"
         android:text="Register"
         android:textColor="?attr/textColor"
@@ -63,11 +65,12 @@
         android:id="@+id/EmailEditReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Enter your e-mail address"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginInfoText" />
 
@@ -75,17 +78,15 @@
         android:id="@+id/registerInfoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="72dp"
+
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
-        android:text="Not got an account? Register below :) "
-=======
-        android:layout_marginTop="20dp"
+
         android:text="Not got an account? Register below "
->>>>>>> Ross-build
         android:textColor="?attr/metaTextColor"
         android:textColorHint="?attr/metaTextColor"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,11 +97,7 @@
         android:id="@+id/submitLoginButton"
         android:layout_width="199dp"
         android:layout_height="47dp"
-<<<<<<< HEAD
-        android:layout_marginTop="56dp"
-=======
-        android:layout_marginTop="44dp"
->>>>>>> Ross-build
+        android:layout_marginTop="20dp"
         android:background="?attr/bgColor"
         android:text="Login"
         android:textColor="?attr/textColor"
