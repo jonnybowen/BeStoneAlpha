@@ -21,113 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
-<<<<<<< HEAD
-=======
-    <EditText
-        android:id="@+id/feedbackText"
-        android:layout_width="175dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Username"
-        android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/subjectsOfInterest"
-        android:layout_width="174dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Subjects"
-        android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackText" />
-
-    <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="172dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Password"
-        android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subjectsOfInterest" />
-
-    <EditText
-        android:id="@+id/confirmPassword"
-        android:layout_width="175dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textColor="?attr/metaTextColor"
-        app:layout_constraintEnd_toStartOf="@+id/searchProfilePicture"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPassword" />
-
-    <Button
-        android:id="@+id/confirmChangesButton"
-        android:layout_width="125dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="100dp"
-        android:background="?attr/bgColor"
-        android:text="Confirm Changes"
-        android:textColor="?attr/textColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
->>>>>>> Ross-build
-
-    <Button
-        android:id="@+id/StudyOppButton"
-        android:layout_width="131dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="4500dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:layout_marginBottom="100dp"
-        android:background="?attr/bgColor"
-        android:text="Create Study Opportunity"
-        android:textColor="?attr/textColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/applyTutor"
         android:layout_width="217dp"
@@ -186,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="250dp"
@@ -194,7 +87,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/profileEmailAddress" />
 
     <RatingBar
         android:id="@+id/ratingBar2"
@@ -211,3 +104,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+

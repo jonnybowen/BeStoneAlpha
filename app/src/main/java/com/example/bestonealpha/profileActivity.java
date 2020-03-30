@@ -66,6 +66,16 @@ public class profileActivity extends AppCompatActivity {
         //    }
       //  });
 
+       // profileUsername = findViewById(R.id.profileUsername);
+      //  profileEmailAddress = findViewById(R.id.profileEmailAddress);
+      //  profileRatingCount = findViewById(R.id.profileRatingCount);
+
+      //  profileUsername.setText(profileEmail);
+      //  profileEmailAddress.setText(profileDisplayName);
+       // profileRatingCount.setText(profileFeedbackCount);
+
+
+
        Button appTut = findViewById(R.id.applyTutor);
        appTut.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -73,6 +83,25 @@ public class profileActivity extends AppCompatActivity {
                Intent Apptutor = new Intent(getApplicationContext(), TutorActivity.class);
                startActivity(Apptutor);
            }
+
+        //button to create a study session
+        //Button createStudyOppButton = findViewById(R.id.StudyOppButton);
+        //createStudyOppButton.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View v) {
+              //  Intent createStudyOppScreen = new Intent(getApplicationContext(), createStudyOpp.class);
+                //startActivity(createStudyOppScreen);
+            });
+
+        //button to apply to become a tutor
+        Button applTut = findViewById(R.id.applyTutor);
+        applTut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tutor = new Intent(getApplicationContext(), TutorActivity.class);
+                startActivity(tutor);
+            }
+
         });
 
 

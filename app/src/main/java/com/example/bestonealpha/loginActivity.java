@@ -13,12 +13,14 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 public class loginActivity extends AppCompatActivity {
 
+
+
     // Declare variable
     String emailString;
     String passwordString;
     String username;
     String userPassword;
-    TextView emptyCheck = (TextView) findViewById(R.id.emptyFieldText);
+
 
 
     // Declare views/editTexts/Buttons/TextViews
@@ -43,31 +45,34 @@ public class loginActivity extends AppCompatActivity {
     public void setPasswordString(String passIn) {
         passwordString = passIn;
     }
-
+    // method for checking the email field to ensure it is correct
     public boolean emailCheck() {
         EditText emailReg = (EditText) findViewById(R.id.emailEditReg);
         TextView emailError = (TextView) findViewById(R.id.emailError);
-        if (!emailReg.getText().toString().contains("@" + ".")) {
+        TextView emptyCheck = (TextView) findViewById(R.id.emptyFieldError);
+        if (!emailReg.getText().toString().contains("@")) {
             emailError.setVisibility(View.VISIBLE);
             return false;
         } else if (emailReg.getText().toString().isEmpty()) {
             emptyCheck.setVisibility(View.VISIBLE);
+            return false;
         }
         return true;
     }
-
-
-
+    // method for checking both password fields to ensure they are correct
     public boolean passwordCheck() {
         EditText passwordReg = (EditText) findViewById(R.id.passwordReg);
         EditText confirmPasswordReg = (EditText) findViewById(R.id.confirmPasswordReg);
         TextView passwordError = (TextView) findViewById(R.id.passwordError);
+        TextView emptyCheck = (TextView) findViewById(R.id.emptyFieldError);
 
-        if (!passwordReg.getText().toString().equals(confirmPasswordReg)) {
+        if (!passwordReg.getText().toString().equals(confirmPasswordReg.getText().toString())) {
             passwordError.setVisibility(View.VISIBLE);
+
             return false;
         } else if (passwordReg.getText().toString().isEmpty() || confirmPasswordReg.getText().toString().isEmpty()) {
             emptyCheck.setVisibility(View.VISIBLE);
+            return false;
         }
         return true;
     }
@@ -85,7 +90,7 @@ public class loginActivity extends AppCompatActivity {
         }
 
         //Initialise buttons/views
-        register = (Button) findViewById(R.id.RegisterButton);
+
         login = (Button) findViewById(R.id.submitLoginButton);
 
 
@@ -101,7 +106,6 @@ public class loginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int count = 5;
 
                 //Initialise Strings
                 emailString = email.getText().toString();
@@ -114,45 +118,41 @@ public class loginActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("user", currentUser);
 
-<<<<<<< HEAD
                 //Move to next activity.
                 Intent searchScreen = new Intent(getApplicationContext(), searchActivity.class);
                 searchScreen.putExtras(bundle);
                 startActivity(searchScreen);
 
-=======
+
+                //test case to check login functionality
+
                 if (emailString.equals("test@test.com") && passwordString.equals("1234")) {
                     Intent goToSearch = new Intent(getApplicationContext(), searchActivity.class);
                     startActivity(goToSearch);
                 } else if (emailString.isEmpty() || passwordString.isEmpty()) {
                     loginFail = (TextView) findViewById(R.id.loginFail);
                     loginFail.setText("Please input all information before pressing login.");
-                } else {
-                    count--;
-                    loginFail.setText("Incorrect email/password, please try again. Attempts left: " + String.valueOf(count));
-                    if (count == 0) {
-                        loginFail.setText("You have input the incorrect details too many times.");
-                        login.setEnabled(false);
-                    }
+                } else{
+                    loginFail.setText("Incorrect email/password, please try again.");
                 }
->>>>>>> Ross-build
+
 
             }
         });
 
-<<<<<<< HEAD
-=======
+
+        register = (Button) findViewById(R.id.RegisterButton);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(passwordCheck() == true && emailCheck() == true){
+                if (passwordCheck() == true && emailCheck() == true) {
                     Intent goToSearch = new Intent(getApplicationContext(), searchActivity.class);
                     startActivity(goToSearch);
                 }
-                register.setEnabled(false);
             }
         });
->>>>>>> Ross-build
+
     }
 
 

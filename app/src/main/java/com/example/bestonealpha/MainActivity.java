@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    searchActivity search = new searchActivity();
+
+
     //Declare variables
     static User currentUser;
 
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
 
+        //night mode
         TextView changeTheme = findViewById(R.id.changeTheme);
         changeTheme.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, MainActivity.this.getClass()));
             }
         });
-
+        //creating and setting the functions of the buttons
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(loginScreen);
             }
         });
-        Button searchButton = findViewById(R.id.searchButton);
+        final Button searchButton = findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    // method for showing the pop up window
     public void showPopUp(View view) {
         LayoutInflater i = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);

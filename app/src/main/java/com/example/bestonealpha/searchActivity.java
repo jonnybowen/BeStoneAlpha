@@ -51,7 +51,7 @@ public class searchActivity extends AppCompatActivity {
 
         // Initialise button
         createButton = findViewById(R.id.searchCreateGroupBtn);
-        profile = findViewById(R.id.button3);
+        profile = findViewById(R.id.searchProfileButton);
 
 
         // Create Users and Study Groups to populate group list
