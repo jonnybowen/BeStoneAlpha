@@ -93,17 +93,6 @@ public class loginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Register Button
-        Button register = findViewById(R.id.loginRegisterButton);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerScreen = new Intent(getApplicationContext(), registerActivity.class);
-                startActivity(registerScreen);
-            }
-        });
-
-
         //Submit Login Button
         email = (EditText) findViewById(R.id.EmailEditReg);
         password = (EditText) findViewById(R.id.passwordEditLogin);
