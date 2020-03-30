@@ -9,12 +9,20 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
+        <activity android:name=".searchActivity"></activity>
+
+        <activity android:name=".tutorConfirm"
+            android:parentActivityName=".profileActivity"/>
+
+
+
         <activity android:name=".groupCreatedActivity"></activity>
-=======
+
         <activity android:name=".hostProfileActivity"></activity>
->>>>>>> Ross-build
+
         <activity android:name=".searchActivity" />
+
         <activity
             android:name=".TutorActivity"
             android:parentActivityName=".profileActivity" />

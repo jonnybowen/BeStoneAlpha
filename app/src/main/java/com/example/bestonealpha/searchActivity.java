@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import android.widget.ImageButton;
+
 import android.widget.ListView;
 
 import com.example.bestonealpha.data.GroupListAdapter;
@@ -16,6 +19,9 @@ public class searchActivity extends AppCompatActivity {
 
     //Declare views
     Button createButton;
+
+    Button profile;
+
 
     // Declare and initialise variables
     ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
@@ -34,8 +40,19 @@ public class searchActivity extends AppCompatActivity {
         ListView list = (ListView) findViewById(R.id.searchListView);
         Button searchProfileButton = (Button) findViewById(R.id.searchProfileButton);
 
+
+
+        // Declare and initialise variables
+        ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+
         // Initialise button
         createButton = findViewById(R.id.searchCreateGroupBtn);
+
+
+        // Initialise button
+        createButton = findViewById(R.id.searchCreateGroupBtn);
+        profile = findViewById(R.id.button3);
+
 
         // Create Users and Study Groups to populate group list
         User a = new User("annie@amail.com", "somepassword2", "Annie K");
@@ -71,6 +88,25 @@ public class searchActivity extends AppCompatActivity {
                 startActivity(groupCreated);
             }
         });
+
+
+        //Create Group Button
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent groupCreated = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(groupCreated);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+                    public void onClick(View v) {
+                Intent viewProfile = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(viewProfile);
+            }
+        });
+
 
 
     }
