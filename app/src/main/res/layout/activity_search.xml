@@ -35,8 +35,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchView" >
 
     </ListView>
-
-=======
+    
     <Button
         android:id="@+id/searchCreateGroupBtn"
         android:layout_width="wrap_content"
@@ -63,5 +62,5 @@
         app:layout_constraintStart_toEndOf="@+id/searchCreateGroupBtn"
         app:layout_constraintTop_toBottomOf="@+id/searchListView" />
 
->>>>>>> Stashed changes
+
 </androidx.constraintlayout.widget.ConstraintLayout>
