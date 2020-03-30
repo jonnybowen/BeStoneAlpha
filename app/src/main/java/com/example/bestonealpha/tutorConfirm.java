@@ -3,14 +3,12 @@ package com.example.bestonealpha;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class TutorActivity extends AppCompatActivity {
+public class tutorConfirm extends AppCompatActivity {
 
-    Button applyTut;
+    TextView applyNotf;
 
 
     @Override
@@ -22,16 +20,9 @@ public class TutorActivity extends AppCompatActivity {
             setTheme(R.style.AppLightTheme);
         }
         setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_apply_tutor);
+        setContentView(R.layout.activity_tutor_confirm);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-       Button applyTut = findViewById(R.id.applyToBeTut);
-        applyTut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent applyToTutor = new Intent(getApplicationContext(), tutorConfirm.class);
-                startActivity(applyToTutor);
-            }
-        });
+        applyNotf = findViewById(R.id.textView3);
     }
 }

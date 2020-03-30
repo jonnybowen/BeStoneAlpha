@@ -2,6 +2,12 @@ package com.example.bestonealpha;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+<<<<<<< Updated upstream
+=======
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+>>>>>>> Stashed changes
 import android.widget.ListView;
 
 import com.example.bestonealpha.data.GroupListAdapter;
@@ -10,6 +16,19 @@ import java.util.ArrayList;
 
 public class searchActivity extends AppCompatActivity {
 
+<<<<<<< Updated upstream
+=======
+    //Declare views
+    Button createButton;
+    Button profile;
+
+    // Declare and initialise variables
+    ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+
+    public ArrayList<StudyGroup> getMasterGroupList() {
+        return masterGroupList;
+    }
+>>>>>>> Stashed changes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +36,14 @@ public class searchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchListView);
 
+<<<<<<< Updated upstream
         // Declare and initialise variables
         ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+=======
+        // Initialise button
+        createButton = findViewById(R.id.searchCreateGroupBtn);
+        profile = findViewById(R.id.button3);
+>>>>>>> Stashed changes
 
         // Create Users and Study Groups to populate group list
         User a = new User("annie@amail.com", "somepassword2", "Annie K");
@@ -38,5 +63,26 @@ public class searchActivity extends AppCompatActivity {
         list.setAdapter(adapter);
 
 
+<<<<<<< Updated upstream
+=======
+        //Create Group Button
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent groupCreated = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(groupCreated);
+            }
+        });
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+                    public void onClick(View v) {
+                Intent viewProfile = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(viewProfile);
+            }
+        });
+
+
+>>>>>>> Stashed changes
     }
 }

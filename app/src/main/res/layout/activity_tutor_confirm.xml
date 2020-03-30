@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tutorConfirm">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="364dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:text="YOUR APPLICATION TO BECOME A TUTOR HAS SUCCESSFULLY BEEN SUBMITTED AND IS CURRENTLY UNDER ASSESSMENT FROM A MEMBER OF OUR TEAM WHO WILL LOOK TO CONTACT YOU IN DUE COURSE TO ADVISE YOU OF THE OUTCOME OF THIS. PLEASE DO NOT HESITATE TO CONTACT US SHOULD ANY FURTHER INFORMATION BE REQUIRED REGARDING THIS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

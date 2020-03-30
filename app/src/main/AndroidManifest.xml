@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".searchActivity"></activity>
+=======
+        <activity android:name=".tutorConfirm"
+            android:parentActivityName=".profileActivity"/>
+>>>>>>> Stashed changes
         <activity
             android:name=".TutorActivity"
             android:parentActivityName=".profileActivity" />
