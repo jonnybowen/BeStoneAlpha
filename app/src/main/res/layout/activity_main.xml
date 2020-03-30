@@ -13,7 +13,7 @@
         android:layout_height="73dp"
         android:layout_marginTop="104dp"
         android:background="?attr/bgColor"
-        android:text="Be Stone :)"
+        android:text="Be Stone(d)"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="?attr/textColor"
         android:textSize="40sp"
@@ -78,10 +78,13 @@
         android:id="@+id/changeTheme"
         android:layout_width="113dp"
         android:layout_height="28dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
         android:text="Change Theme"
         android:textColor="#279C8F"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="559dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

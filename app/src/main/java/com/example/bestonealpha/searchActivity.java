@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import android.widget.ImageButton;
+
 import android.widget.ListView;
 
 import com.example.bestonealpha.data.GroupListAdapter;
@@ -17,7 +19,9 @@ public class searchActivity extends AppCompatActivity {
 
     //Declare views
     Button createButton;
+
     Button profile;
+
 
     // Declare and initialise variables
     ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
@@ -26,15 +30,24 @@ public class searchActivity extends AppCompatActivity {
         return masterGroupList;
     }
 
+    public void setMasterGroupList(ArrayList<StudyGroup> masterGroupList) {
+        this.masterGroupList = masterGroupList;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchListView);
+        Button searchProfileButton = (Button) findViewById(R.id.searchProfileButton);
+
 
 
         // Declare and initialise variables
         ArrayList<StudyGroup> masterGroupList = new ArrayList<>();
+
+        // Initialise button
+        createButton = findViewById(R.id.searchCreateGroupBtn);
+
 
         // Initialise button
         createButton = findViewById(R.id.searchCreateGroupBtn);
@@ -57,6 +70,24 @@ public class searchActivity extends AppCompatActivity {
 
         GroupListAdapter adapter = new GroupListAdapter(this, R.layout.group_adapter_view, masterGroupList);
         list.setAdapter(adapter);
+
+        searchProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToProfile = new Intent(getApplicationContext(), profileActivity.class);
+                startActivity(goToProfile);
+            }
+        });
+
+
+        //Create Group Button
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent groupCreated = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(groupCreated);
+            }
+        });
 
 
         //Create Group Button

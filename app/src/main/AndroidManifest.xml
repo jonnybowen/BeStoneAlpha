@@ -9,11 +9,20 @@
         android:roundIcon="@mipmap/stone"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".searchActivity"></activity>
-=======
+
         <activity android:name=".tutorConfirm"
             android:parentActivityName=".profileActivity"/>
->>>>>>> Stashed changes
+
+
+
+        <activity android:name=".groupCreatedActivity"></activity>
+
+        <activity android:name=".hostProfileActivity"></activity>
+
+        <activity android:name=".searchActivity" />
+
         <activity
             android:name=".TutorActivity"
             android:parentActivityName=".profileActivity" />
@@ -25,9 +34,6 @@
         <activity
             android:name=".profileActivity"
             android:parentActivityName=".searchActivity" />
-        <activity
-            android:name=".registerActivity"
-            android:parentActivityName=".loginActivity" />
         <activity
             android:name=".loginActivity"
             android:parentActivityName=".MainActivity" />
