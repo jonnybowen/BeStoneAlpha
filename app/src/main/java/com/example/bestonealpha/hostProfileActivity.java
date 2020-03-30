@@ -11,15 +11,13 @@ import android.widget.RatingBar;
 
 public class hostProfileActivity extends AppCompatActivity {
 
-    User user = new User();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host_profile);
 
         final Button giveFeedbackButton = (Button) findViewById(R.id.giveFeedbackButton);
-
+        //button to give the tutor feedback
         giveFeedbackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,8 +25,5 @@ public class hostProfileActivity extends AppCompatActivity {
                 startActivity(goToFeedback);
             }
         });
-
-        RatingBar userRating = (RatingBar) findViewById(R.id.userRating);
-
     }
 }

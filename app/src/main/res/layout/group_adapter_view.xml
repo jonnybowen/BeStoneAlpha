@@ -32,7 +32,7 @@
             android:id="@+id/gav_nextSession"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_below="@+id/textView2"
+            android:layout_below="@+id/loginInfoText"
             android:gravity="center"
             android:text="next session" />
     </LinearLayout>

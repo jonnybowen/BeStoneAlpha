@@ -44,7 +44,6 @@ public class profileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-<<<<<<< Updated upstream
         username = findViewById(R.id.profileUsername);
         email = findViewById(R.id.profileEmailAddress);
         rating = findViewById(R.id.profileRatingCount);
@@ -66,7 +65,7 @@ public class profileActivity extends AppCompatActivity {
               //  startActivity(createStudyOppScreen);
         //    }
       //  });
-=======
+
         profileUsername = findViewById(R.id.profileUsername);
         profileEmailAddress = findViewById(R.id.profileEmailAddress);
         profileRatingCount = findViewById(R.id.profileRatingCount);
@@ -76,7 +75,6 @@ public class profileActivity extends AppCompatActivity {
         profileRatingCount.setText(profileFeedbackCount);
 
 
->>>>>>> Stashed changes
 
        Button appTut = findViewById(R.id.applyTutor);
        appTut.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +83,25 @@ public class profileActivity extends AppCompatActivity {
                Intent Apptutor = new Intent(getApplicationContext(), TutorActivity.class);
                startActivity(Apptutor);
            }
+
+        //button to create a study session
+        Button createStudyOppButton = findViewById(R.id.StudyOppButton);
+        createStudyOppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent createStudyOppScreen = new Intent(getApplicationContext(), createStudyOpp.class);
+                startActivity(createStudyOppScreen);
+            }
+        });
+        //button to apply to become a tutor
+        Button applyTutor = findViewById(R.id.applyTutor);
+        applyTutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tutor = new Intent(getApplicationContext(), TutorActivity.class);
+                startActivity(tutor);
+            }
+
         });
 
 
